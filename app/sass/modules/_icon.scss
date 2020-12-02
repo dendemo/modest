@@ -1,0 +1,40 @@
+@font-face {
+  font-family: 'fontello';       
+  src: url(#{$iconFonts}/fontello.woff2?92210742) format('woff2'),
+       url(#{$iconFonts}/fontello.woff?92210742) format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+ 
+.icon {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 100%;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  @at-root &_outstand {
+    font-size: 4.7rem;
+    color: $java;
+  }
+
+  @at-root &_behance:before { content: '\f1b4'; }
+  @at-root &_cancel:before { content: '\e805'; }
+  @at-root &_clock:before { content: '\e803'; } 
+  @at-root &_cogs:before { content: '\e802'; }
+  @at-root &_dribbble:before { content: '\f17d'; }
+  @at-root &_facebook:before { content: '\f09a'; }
+  @at-root &_google:before { content: '\e800'; }
+  @at-root &_linkedin:before { content: '\f0e1'; }
+  @at-root &_menu:before { content: '\f0c9'; }
+  @at-root &_mobile:before { content: '\e804'; }
+  @at-root &_pencil:before { content: '\e801'; }
+  @at-root &_skype:before { content: '\f17e'; }
+  @at-root &_twitter:before { content: '\f099'; }
+}

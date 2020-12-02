@@ -1,0 +1,13 @@
+.info {
+  @at-root &__title {
+    margin-bottom: 20px;
+
+    @include render(tablet) {
+      font-size: 2rem;
+    }
+
+    @include render(desktop) {
+    	margin-bottom: 35px;
+    }
+  }
+}

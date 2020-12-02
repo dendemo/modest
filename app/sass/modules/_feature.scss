@@ -1,0 +1,31 @@
+.feature {
+	display: flex;
+	flex-direction: column;
+
+  @at-root &__img-box {
+	order: 1;
+	margin-bottom: 20px;
+
+  @include render(desktop) {
+    margin-bottom: 50px;
+  }
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  @at-root &__title {
+  	order: 2;
+  	color: $white;
+  	margin-bottom: 10px;
+
+    @include render(desktop) {
+      margin-bottom: 20px;
+    }
+  }
+
+  @at-root &__content {
+  	order: 3;
+  }
+}

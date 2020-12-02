@@ -1,0 +1,46 @@
+.assets-list {
+  counter-reset: custom;
+
+  @at-root &__item {
+    counter-increment: custom;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    &:before {
+      content: '0'counter(custom);
+      margin-bottom: 10px;
+      float: left;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+      font-size: 2rem;
+      font-weight: bold;
+      background-color: $java;
+      color: $white; 
+      letter-spacing: 1px;
+
+      @include render(tablet) {
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+      }
+    }
+  }
+
+  @at-root &__header {
+    text-transform: uppercase;
+    margin-bottom: 5px;
+  }
+
+  &__header,
+  &__content {
+    margin-left: 60px;
+
+    @include render(tablet) {
+      margin-left: 70px;
+    }
+  }
+}

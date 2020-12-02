@@ -1,0 +1,7 @@
+.gravity {
+  font-size: 1.1rem;
+
+  @include render(tablet) {
+  	font-size: 1.4rem;
+  }
+}

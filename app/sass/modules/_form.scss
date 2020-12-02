@@ -1,0 +1,65 @@
+.form {
+  background-color: $white;
+
+  @include render(desktop) {
+    padding: 27px;
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  @at-root &__shell-control {
+    margin-bottom: 20px;
+
+    @include render(desktop) {
+      flex: 1 0 auto;
+      margin-bottom: 28px;
+
+      &:first-child {
+        margin-right: $gap;
+      }
+    }
+  }
+
+  @at-root &__shell-area {
+    margin-bottom: 20px;
+
+    @include render(desktop) {
+      flex: 1 0 100%;
+      margin-bottom: 28px;
+    }
+  }
+
+  @at-root &__area {
+    height: 160px;
+  }
+
+  @at-root &__label {
+    display: none;
+
+    @include render(desktop) {
+      display: block;
+      color: $oslo;
+      font-size: 1.4rem;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+      margin-left: 5px;
+      cursor: pointer;
+    }
+  }
+
+  @at-root &__item {
+    padding: 14px;
+    border: none;
+    background-color: $athens-light;
+    border-radius: 3px;
+    width: 100%;
+    vertical-align: bottom;
+    resize: none;
+    max-height: 100%;
+
+    &::placeholder {
+      color: $chost;
+      text-transform: uppercase;
+    }
+  }
+}

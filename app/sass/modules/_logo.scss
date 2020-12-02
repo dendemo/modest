@@ -1,0 +1,13 @@
+ .logo {
+    margin: 0;
+    line-height: 0;
+    width: 70px;
+
+    @include render(desktop) {
+    	width: 95px;
+    }
+
+    img {
+    	width: 100%;
+    }
+}

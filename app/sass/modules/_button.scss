@@ -1,0 +1,46 @@
+.button {
+  border-radius: 4px;
+  display: inline-block;
+  font-size: 1.4rem;
+  font-weight: bold;
+  line-height: 40px;
+  max-width: 200px;
+  padding: 0 20px;
+  text-transform: uppercase;
+  border: 2px solid;
+  color: $white;
+  cursor: pointer;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  transition: all ease-out 50ms .1s;
+
+  @include render(desktop_hd) {
+    line-height: 56px;
+    padding: 0 28px;
+    max-width: 280px;
+  }
+
+  @at-root &_common {
+    border-color: $white;
+
+    &:hover,
+    &:focus {
+      @extend %flip;
+    }
+  }
+
+  @at-root &_reverse {
+    @extend %flip;
+
+    &:hover,
+    &:focus {
+      opacity: .7;
+    }
+  }
+}
+
+%flip {
+  background-color: $java;
+  border-color: $java;
+}

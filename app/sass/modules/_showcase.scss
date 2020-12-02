@@ -1,0 +1,75 @@
+.showcase {
+  position: relative;
+  z-index: 10;
+
+  @at-root &__img-box {
+    min-height: 150px;
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      z-index: -1;
+      position: relative;
+    }
+  }
+
+  @at-root &__link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    @include render(desktop) {
+      opacity: 0;
+      transition: opacity $showcaseFunc $showcaseDuration $showcaseDelay;
+
+      &:hover,
+      &:focus {
+        opacity: 1;
+      }
+    }
+
+    &:before {
+      content: '+';
+      color: $white;
+      font-size: 50px;
+      font-weight: bold;
+      flex-grow: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1;
+    }
+
+    &:after {
+      content: '';
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background-color: $shark-light;
+      opacity: 0;
+      transition: opacity $showcaseFunc $showcaseDuration $showcaseDelay;
+      z-index: 2;
+    }
+
+    &:hover,
+    &:focus {
+      &:after {
+        opacity: .5;
+      }
+    }
+  }
+
+  @at-root &__title {
+    color: $white;
+    padding: 20px;
+    background-color: $shark-light;
+    z-index: 3;
+  }
+}

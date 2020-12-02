@@ -1,0 +1,64 @@
+.nav {
+  background-color: $shark;
+
+  @include render(desktop) {
+    display: flex; 
+    align-items: center;
+  }
+
+  @at-root &__list {
+    @include render(desktop) {
+      margin-left: auto;
+      display: flex;
+    }
+  }
+
+  @at-root &__item {
+    margin: 0 $gap;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid $edward;
+    }
+
+    @include render(desktop) {
+      margin-left: 0;
+
+      &:not(:last-child) {
+        border-bottom: none;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  @at-root &__link {
+    color: $edward;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    display: block;
+    padding: $gap 0;
+    transition: all 100ms 0s;
+
+    @include render(desktop) {
+      font-size: 1.4rem;
+      padding: 6px 9px;
+      border: 2px solid transparent;
+      border-radius: 2px;
+
+      &:hover {
+        border-color: $shuttle-gray;
+      }
+    }
+
+    &_active {
+      color: $java;
+
+      @include render(desktop) {
+        border: 2px solid;
+        border-color: $java !important;
+      }
+    }
+  }
+}
